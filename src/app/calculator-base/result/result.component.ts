@@ -30,17 +30,17 @@ export class ResultComponent implements OnInit, OnDestroy {
       switch (event.type) {
         case 'result':
           let isEvalValid = true;
+
           try {
             safeEval(this.operation);
           } catch (e) {
             this.operation = 'SYNTAX ERROR';
             isEvalValid = false;
           }
-          console.log(isEvalValid);
+
           if (isEvalValid) {
             this.operation = safeEval(this.operation).toString();
           }
-
           break;
 
         case 'delete':
