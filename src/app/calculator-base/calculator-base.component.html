@@ -1,3 +1,4 @@
-<p>
-  calculator-base works!
-</p>
+<div class="base">
+  <app-result [events]="eventsSubject.asObservable()"></app-result>
+  <app-entries (sendOperation)="receiveOperation($event)"></app-entries>
+</div>

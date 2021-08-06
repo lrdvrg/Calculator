@@ -1,0 +1,10 @@
+.result {
+  border: 1px solid rgb(125 125 125);
+  border-radius: 6px;
+  margin: 0px 8px 25px;
+  padding: 1em;
+  background: #f2f2f2;
+  cursor: default;
+  min-height: 18px !important;
+  word-break: break-word;
+}

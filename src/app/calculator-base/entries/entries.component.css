@@ -1,0 +1,31 @@
+.entries {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    ". . . .";
+}
+
+.entry {
+  border: 1px solid rgb(125 125 125);
+  border-radius: 6px;
+  margin: 7px auto;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 52px;
+  cursor: pointer;
+}
+
+.entry:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.action {
+  background-color: #ffb32b;
+  color: white;
+}
+
+.action:hover {
+  background-color: #f2a829;
+}

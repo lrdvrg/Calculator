@@ -1,0 +1,3 @@
+<div class="entries">
+  <div [ngClass]="{'action': entry.type === 'result'}" *ngFor="let entry of entries" class="entry" (click)="write(entry)">{{entry.viewValue}}</div>
+</div>
