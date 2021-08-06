@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Entry } from './models/entry';
 
@@ -7,7 +7,7 @@ import { Entry } from './models/entry';
   templateUrl: './calculator-base.component.html',
   styleUrls: ['./calculator-base.component.css'],
 })
-export class CalculatorBaseComponent implements OnInit {
+export class CalculatorBaseComponent {
   @Output() doAction = new EventEmitter<any>();
 
   eventsSubject: Subject<void> = new Subject<void>();
@@ -34,10 +34,6 @@ export class CalculatorBaseComponent implements OnInit {
     { viewValue: '.', value: '.', type: 'number' },
     { viewValue: '=', value: '=', type: 'result' },
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
 
   sentToDo(event) {
     this.eventsSubject.next(event);

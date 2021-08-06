@@ -13,8 +13,6 @@ export class ResultComponent implements OnInit, OnDestroy {
   private eventsSubscription: Subscription;
   @Input() events: Observable<void>;
 
-  constructor() {}
-
   ngOnInit() {
     this.eventsSubscription = this.events.subscribe((event) =>
       this.doOperation(event)
