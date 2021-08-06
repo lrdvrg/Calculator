@@ -1,4 +1,7 @@
 <div class="base">
   <app-result [events]="eventsSubject.asObservable()"></app-result>
-  <app-entries (sendOperation)="receiveOperation($event)"></app-entries>
+  <div class="entries">
+    <div [ngClass]="{'action': entry.type === 'result', 'inactive': entry.type === 'percentage' || entry.type === 'parentheses'}" *ngFor="let entry of entries" class="entry" (click)="sentToDo(entry)">{{entry.viewValue}}</div>
+  </div>
+
 </div>

@@ -6,3 +6,44 @@
   -webkit-box-shadow: 10px 10px 9px -2px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 10px 10px 9px -2px rgba(0, 0, 0, 0.23);
 }
+
+.entries {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . . .';
+}
+
+.entry {
+  border: 1px solid rgb(125 125 125);
+  border-radius: 6px;
+  margin: 7px auto;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 52px;
+  cursor: pointer;
+}
+
+.inactive {
+  background-color: rgb(248 248 248);
+  color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+.inactive:hover {
+  background-color: rgb(248, 248, 248) !important;
+}
+
+.entry:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.action {
+  background-color: #ffb32b;
+  color: white;
+}
+
+.action:hover {
+  background-color: #f2a829;
+}

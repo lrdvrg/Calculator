@@ -40,7 +40,6 @@ export class ResultComponent implements OnInit, OnDestroy {
           }
           console.log(isEvalValid);
           if (isEvalValid) {
-            console.log(typeof safeEval(this.operation));
             this.operation = safeEval(this.operation).toString();
           }
 
@@ -51,7 +50,9 @@ export class ResultComponent implements OnInit, OnDestroy {
           break;
 
         case 'parentheses':
-          this.operation = '';
+          break;
+
+        case 'percentage':
           break;
 
         case '+/-':
